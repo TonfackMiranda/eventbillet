@@ -1,0 +1,8 @@
+export {default as Layout} from './Layout'
+export {default as Home} from './Home'
+export {default as Admin} from './Admin'
+export {default as Partner} from './Partner'
+export {default as Connection} from './Connection'
+export {default as Event} from './Event'
+export {default as TypeEvent} from './Event/TypeEvent'
+export {default as DetailsEvent} from './Event/TypeEvent/DetailsEvent'

@@ -1,0 +1,85 @@
+.home {
+    .SectionMain {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 100vh;
+        color: var(--COLOR-1);
+
+        .left {
+            width: 55%;
+            height: auto;
+            text-align: center;
+
+            .title {
+                font-size: var(--SIZE-1);
+                text-transform: uppercase;
+                margin-bottom: 2rem;
+            }
+
+            .description {
+                font-size: var(--SIZE-2);
+            }
+
+            .search-content {
+                margin: 2rem 0;
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+
+                .search {
+                    padding: .8rem;
+                    width: 100%;
+                    height: 45px;
+                    font-size: var(--SIZE-3);
+                    border: 2px solid var(--COLOR-1);
+                    border-radius: 10px;
+                    outline: none;
+                    background: none;
+                    color: var(--COLOR-1);
+
+                    &::placeholder {
+                        color: var(--COLOR-1);
+                    }
+                }
+            }
+        }
+
+        .right {
+            position: absolute;
+            right: 3rem;
+            width: 35%;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .about {
+        .left, .right {
+            width: 50%;
+        }
+
+        .right {
+            color: var(--COLOR-1);
+            text-align: center;
+        }
+    }
+
+    .mission {
+        .left, .right {
+            width: 50%;
+            color: var(--COLOR-1);
+        }
+
+        .left {
+            .actor {
+                .actor-details {
+                    margin-left: 1rem;
+                }
+            }
+        }
+    }
+}

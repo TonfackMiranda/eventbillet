@@ -1,0 +1,28 @@
+.details-event {
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .short-view {
+            width: calc(100% - 10rem);
+            height: 20rem;
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        } 
+
+        .description {
+            text-align: center;
+            padding: 2rem 10rem;
+            p {
+                color: var(--COLOR-1);
+            }
+        }
+    }
+}
