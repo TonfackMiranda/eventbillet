@@ -1,7 +1,9 @@
 import React from 'react'
 import PublicHeader from '../../components/Header/PublicHeader'
 import './home.scss'
-import CodeQR from '../../assets/images/qr-code-156717.svg'
+import CodeQR from '../../assets/images/codeQr.jpg'
+import AboutUs from '../../assets/images/aboutUs.svg'
+import Mission from '../../assets/images/mission.png'
 import Footer from '../../components/Footer'
 
 const Home = () => {
@@ -21,12 +23,12 @@ const Home = () => {
                 </div>
 
                 <div className="right">
-                    <img src={CodeQR} alt="" />
+                    <img src={CodeQR} alt="code qr" />
                 </div>
             </div>
             <div className="about padding">
                 <div className="left">
-
+                    <img src={AboutUs} alt="AboutUs" />
                 </div>
                 <div className="right">
                     <h1 className='first-title'>A propos</h1>
@@ -35,8 +37,9 @@ const Home = () => {
                         passionnants. Aue ce soit des concerts, des spectacles, des festivals ou évènéments sportifs, notre plateformes conviviale vous permet de
                         parcourir les différents évènements, de consulter les détails et de sécuriser vos places en quelques clics. De plus, les organisateurs
                         d'évènements peuvent également utiliser notre plateforme pour organiser leurs évènements et mettre  les billets en vente, offrant ainsi
-                        une solution complète pour la gestion d'évènements. Profitew une expérience simple et pratique pour planifier vos sorties et ne manquez
-                        aucun moment inoubliable grâce à Event World.
+                        une solution complète pour la gestion d'évènements. 
+                        {/* Profitez une expérience simple et pratique pour planifier vos sorties et ne manquez
+                        aucun moment inoubliable grâce à Event World. */}
                     </p>
                 </div>
             </div>
@@ -64,7 +67,9 @@ const Home = () => {
                         </ul>
                     </ul>
                 </div>
-                <div className="right"></div>
+                <div className="right">
+                    <img src={Mission} alt="Mission" />
+                </div>
             </div>
             <Footer/>
         </div>

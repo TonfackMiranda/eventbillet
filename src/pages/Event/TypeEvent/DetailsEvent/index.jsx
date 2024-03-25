@@ -2,6 +2,7 @@ import React from 'react'
 import ImageTypeEvent from '../../../../assets/images/3.jpg'
 import PublicHeader from '../../../../components/Header/PublicHeader'
 import './detailsEvent.scss'
+import Footer from '../../../../components/Footer'
 
 const DetailsEvent = () => {
     return (
@@ -18,6 +19,7 @@ const DetailsEvent = () => {
                 </div>
                 <button className='btn-custom primary'>Acheter un billet</button>
             </div>
+            <Footer />
         </div>
     )
 }

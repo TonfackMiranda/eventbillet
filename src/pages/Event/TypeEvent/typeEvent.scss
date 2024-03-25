@@ -5,15 +5,19 @@
         align-items: center;
 
         .short-view {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
             width: calc(100% - 10rem);
             height: 20rem;
-            position: relative;
             overflow: hidden;
-            border-radius: 20px;
+            border-radius: var(--RADIUS-1);
 
             img {
                 width: 100%;
                 object-fit: cover;
+                border-radius: var(--RADIUS-1);
             }
 
             .search-content {
@@ -35,9 +39,11 @@
                     outline: none;
                     background: #f1f1f18a;
                     color: var(--COLOR-2);
-
+                    font-weight: 500;
+                    
                     &::placeholder {
                         color: var(--COLOR-2);
+                        font-weight: 500;
                     }
                 }
 
@@ -75,6 +81,14 @@
                 padding: 10px;
                 cursor: pointer;
 
+                span {
+                    font-size: 12px;
+                }
+
+                small {
+                    font-size: 10px;
+                }
+
                 &:first-child {
                     .icon {
                         background: rgb(255, 123, 0);
@@ -92,7 +106,7 @@
                         background: red;
                     }
                 }
-                
+
                 .icon {
                     width: 35px;
                     height: 35px;
@@ -140,4 +154,60 @@
             }
         }
     }
+}
+
+// RESPONSIVE
+@media screen and (max-width: 925px) {
+    .type-event {
+        .content {
+            .short-view {
+                width: 100%;
+                
+                .search-content {
+                    flex-direction: column;
+                    align-items: center;
+
+                    button {
+                        min-width: 120px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 625px) {
+    .type-event {
+        .content {
+            .short-view {
+                width: 100%;
+                // margin-top: 4rem;
+                
+                .search-content {
+                    flex-direction: column;
+                    align-items: center;
+
+                    button {
+                        min-width: 120px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 490px) {
+    .type-event {
+        .content {
+            .short-view {
+                .search-content {
+                    .search {
+                        width: calc(100% + 50px);
+                    }
+                }
+            }
+        }
+    }
+
 }

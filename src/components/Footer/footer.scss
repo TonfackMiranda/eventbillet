@@ -1,5 +1,5 @@
 footer {
-    background: #cfcfcf;
+    background: var(--COLOR-1);
     min-height: 400px;
     display: flex;
     flex-direction: column;
@@ -7,6 +7,15 @@ footer {
     justify-content: center;
     align-items: center;
     text-align: center;
+
+    .logo {
+        color: var(--COLOR-LOGO-2);
+        font-weight: 600;
+        font-size: var(--SIZE-2);
+        border: 1px solid;
+        border-style: dashed;
+        padding: .5rem;
+    }
 
     ul {
         list-style: none;
@@ -16,22 +25,40 @@ footer {
 
         li {
             a {
+                position: relative;
+                font-size: var(--SIZE-3);
                 color: var(--COLOR-2);
-                font-size: 1rem;
                 font-weight: 500;
-                padding: .6rem;
-                border-radius: var(--RADIUS-1);
+                padding: .4rem;
                 cursor: pointer;
+                transition: .5s;
 
                 &:hover {
-                    background: var(--COLOR-2);
-                    color: var(--COLOR-1);
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 32px;
+                        left: 0;
+                        width: 100%;
+                        height: 1px;
+                        background: var(--COLOR-2);
+                    }
                 }
             }
 
             .link-active {
-                background: var(--COLOR-2);
-                color: var(--COLOR-1);
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 32px;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    background: var(--COLOR-2);
+                }
+
+                color: var(--COLOR-2);
+                font-weight: 700;
             }
         }
     }
@@ -45,6 +72,7 @@ footer {
             height: 40px;
             border: 1px solid;
             border-radius: var(--RADIUS-1);
+            color: var(--COLOR-2);
             display: flex;
             justify-content: center;
             align-items: center;

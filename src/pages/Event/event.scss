@@ -29,3 +29,38 @@
         }
     }
 }
+
+// RESPONSIVE
+@media screen and (max-width: 1045px) {
+    .event {
+        .content {
+            .first-title {
+                margin-top: 4rem;
+            }
+            .categories {
+                padding: 0 1rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .event {
+        .content {
+            .categories {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .event {
+        .content {
+            .categories {
+                grid-template-columns: repeat(1, 1fr);
+                padding: 0;
+            }
+        }
+    }
+}

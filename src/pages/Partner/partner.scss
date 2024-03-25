@@ -20,6 +20,7 @@
 
         .details-parter {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
@@ -30,16 +31,12 @@
                 display: flex;
                 flex-direction: column;
                 gap: .6rem;
-                width: 60%;
             }
 
             .contact {
                 display: flex;
-                flex-direction: column;
                 align-items: center;
                 margin: 1.7rem 0;
-                width: 40%;
-
                 form {
                     display: flex;
                     flex-direction: column;
@@ -50,7 +47,7 @@
                     border-radius: var(--RADIUS-1);
 
                     h3 {
-                        color: var(--COLOR-2);
+                        color: var(--COLOR-1);
                     }
 
                     input,

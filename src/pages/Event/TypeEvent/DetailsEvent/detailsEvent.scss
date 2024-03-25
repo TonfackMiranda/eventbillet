@@ -8,20 +8,64 @@
             width: calc(100% - 10rem);
             height: 20rem;
             position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: var(--RADIUS-1);
             overflow: hidden;
-            border-radius: 20px;
 
             img {
                 width: 100%;
+                border-radius: var(--RADIUS-1);
                 object-fit: cover;
             }
-        } 
+        }
 
         .description {
             text-align: center;
             padding: 2rem 10rem;
+
             p {
                 color: var(--COLOR-1);
+            }
+        }
+    }
+}
+
+// RESPONSIVE
+@media screen and (max-width: 935px) {
+    .details-event {
+        .content {
+            .short-view {
+                width: 100%;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .description {
+                padding: 2rem 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .details-event {
+        .content {
+            .short-view {
+                margin-top: 2rem;
+                width: 100%;
+                height: 100%;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .description {
+                padding: 2rem 0;
             }
         }
     }

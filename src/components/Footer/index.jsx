@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import * as RemixIcons from "react-icons/ri"
 import './footer.scss'
 import part1 from '../../assets/images/1.jpg'
 import part2 from '../../assets/images/2.jpg'
@@ -28,7 +29,7 @@ const Footer = () => {
 
     return (
         <footer>
-            <h2>EventWorld</h2>
+            <h2 className='logo'>EventWorld</h2>
             <ul>
                 {Menu.map((item, index) => (
                     <li key={index}><NavLink to={item.path} className={(Link) => (Link.isActive ? 'link-active' : '')}>{item.display}</NavLink></li>
@@ -36,9 +37,9 @@ const Footer = () => {
             </ul>
 
             <div className="social-media">
-                <div className="social">1</div>
-                <div className="social">2</div>
-                <div className="social">3</div>
+                <div className="social"><RemixIcons.RiFacebookBoxFill size={30}/></div>
+                <div className="social"><RemixIcons.RiWhatsappLine size={30}/></div>
+                <div className="social"><RemixIcons.RiInstagramLine size={30}/></div>
             </div>
 
             <p>SITE BY ALL HIGHT CORP</p>

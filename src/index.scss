@@ -1,10 +1,13 @@
 :root {
-  --COLOR-PRIMARY: #433d40;
-  --COLOR-1: #FFF;
-  --COLOR-2: #000;
-  --COLOR-LOGO: #FFF;
+  --COLOR-PRIMARY: #ffffff;
+  --COLOR-SECONDARY: #000;
+  --COLOR-1: #000;
+  --COLOR-2: #FFF;
+  --COLOR-LOGO: #000;
+  --COLOR-LOGO-2: #FFF;
 
   --SIZE-1: 40px;
+  --SIZE-1-SM: 30px;
   --SIZE-2: 16px;
   --SIZE-3: 14px;
   --SIZE-4: 10px;
@@ -21,7 +24,9 @@
   text-decoration: none;
 }
 
-p, ul, li {
+p,
+ul,
+li {
   font-size: var(--SIZE-3);
 }
 
@@ -50,12 +55,14 @@ body {
 }
 
 .primary {
-  background: #000;
-  color: #FFF;
+  background: var(--COLOR-1);
+  color: var(--COLOR-2);
+  border: 1px solid var(--COLOR-1);
 
   &:hover {
-    background: var(--COLOR-1);
-    color: var(--COLOR-2);
+    background: var(--COLOR-2);
+    color: var(--COLOR-1);
+    border-color: var(--COLOR-1);
   }
 }
 
@@ -72,4 +79,26 @@ body {
   color: var(--COLOR-1);
   font-size: 1.5rem;
   margin: 1.7rem 0;
+}
+
+.title {
+  text-align: center;
+}
+
+@media screen and (max-width: 625px) {
+  .padding {
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 625px) {
+  .first-title {
+    font-size: var(--SIZE-1-SM);
+  }
+
+  .title {
+    text-align: center;
+    font-size: var(--SIZE-1-SM);
+  }
+
 }
