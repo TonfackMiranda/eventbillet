@@ -20,6 +20,7 @@ const Login = () => {
       }
       else {
          setWait(false)
+         Navigate('/onlyprivateroute/dashboard')
          try {
             // const res = await Authentification.login(email, password)
             // const token = res.data.token
@@ -72,39 +73,21 @@ const Login = () => {
    }
 
    return (
-      <div className="Login">
-         <div className="Left">
-            <h4>Bienvenue sur EventWorld</h4>
-            <span>Connectez-vous pour continuer</span>
-            <span>Copyright &#xa9;EventWorld 2024 | <a target='_blank' href="https://www.allhcorp.com" rel="noreferrer">made by allhcorp</a> </span>
-         </div>
-         <div className="Right">
-            <form onSubmit={handleLogin} method='post' className="Form">
-               <div className="Logo">
-                  <h2>EventWorld</h2>
-               </div>
-               <h2>Connexion</h2>
-               <div className="InputBox">
-                  <div className="Icon">
-                     <RemixIcons.RiMailLine size={18} />
-                  </div>
-                  <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Email' autoComplete='off' />
-               </div>
-               <div className="InputBox">
-                  <div className="Icon">
-                     <RemixIcons.RiKeyLine size={18} />
-                  </div>
-                  <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder='Mot de passe' autoComplete='off' />
-               </div>
-               <div className="InputBox">
-                  {
-                     wait ?
-                        <button type="submit">Se connecter</button> :
-                        <button>Vérification <span className='ms-2'><Spinners.TailSpin height="20" width="20" ariaLabel="tail-spin-loading" radius="5" color="#fff" /></span></button>
-                  }
-               </div>
-            </form>
-         </div>
+      <div className="login">
+         <form onSubmit={handleLogin} method='post' className="form">
+            <h1 className="logo">EventWorld</h1>
+            <h2>Connexion</h2>
+            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Email' autoComplete='off' />
+            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder='Mot de passe' autoComplete='off' />
+            <div className="btn-submit">
+               {
+                  wait ?
+                     <button type="submit" className='btn-custom primary'>Se connecter</button> :
+                     <button className='btn-custom primary-progress'>Vérification <span className='ms-2'><Spinners.TailSpin height="20" width="20" ariaLabel="tail-spin-loading" radius="5" color="#fff" /></span></button>
+               }
+               <p onClick={() => Navigate('/auth/forgot-pass')}>Mot de passe oublié ?</p>
+            </div>
+         </form>
       </div>
    )
 }

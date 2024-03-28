@@ -4,103 +4,42 @@ export const ItemsInternal = [
     {
         Icon: RemixIcons.RiDashboardLine,
         Display: "Tableau de bord",
-        Link: "/dashboard"
+        Link: "/onlyprivateroute/dashboard"
     },
     {
         Icon: RemixIcons.RiOrganizationChart,
-        Display: "Organisations",
-        Link: "/organizations",
-        subNav: [
-            {
-                Icon: RemixIcons.RiAddLine,
-                Display: "Nouvelle organisation",
-                Link: "/organizations/new",
-            },
-            {
-                Icon: RemixIcons.RiListRadio,
-                Display: "Liste des organisations",
-                Link: "/organizations/list",
-            }
-        ]
+        Display: "Evènements",
+        Link: "/onlyprivateroute/events",
     },
     {
-        Icon: RemixIcons.RiBuildingLine,
-        Display: "Entreprises",
-        Link: "/companies",
-        subNav: [
-            {
-                Icon: RemixIcons.RiAddLine,
-                Display: "Nouvelle entreprise",
-                Link: "/companies/new",
-            },
-            {
-                Icon: RemixIcons.RiListRadio,
-                Display: "Liste des entreprises",
-                Link: "/companies/list",
-            }
-        ]
+        Icon: RemixIcons.RiTicket2Line,
+        Display: "Billets",
+        Link: "/onlyprivateroute/tickets",
     },
     {
-        Icon: RemixIcons.RiSurveyLine,
-        Display: "Enquêtes",
-        Link: "/surveys",
-        subNav: [
-            {
-                Icon: RemixIcons.RiAddLine,
-                Display: "Nouvelle enquête",
-                Link: "/surveys/new",
-            },
-            {
-                Icon: RemixIcons.RiListRadio,
-                Display: "Liste des enquêtes",
-                Link: "/surveys/list",
-            }
-        ]
+        Icon: RemixIcons.RiMoneyEuroBoxLine,
+        Display: "Ventes",
+        Link: "/onlyprivateroute/Sales",
     },
     {
-        Icon: RemixIcons.RiHomeOfficeLine,
-        Display: "Gestion",
-        Link: "/managers",
-        subNav: [
-            {
-                Icon: RemixIcons.RiPantoneLine,
-                Display: "produits",
-                Link: "/managers/products",
-            },
-            {
-                Icon: RemixIcons.RiKeynoteLine,
-                Display: "Tables",
-                Link: "/managers/tables",
-            }
-        ]
+        Icon: RemixIcons.RiAccountPinBoxLine,
+        Display: "Comptes",
+        Link: "/onlyprivateroute/accounts",
     },
     {
         Icon: RemixIcons.RiUserHeartLine,
         Display: "Clients",
-        Link: "/customers",
+        Link: "/onlyprivateroute/customers",
     },
     {
         Icon: RemixIcons.RiUserSettingsLine,
         Display: "Utilisateurs",
-        Link: "/users",
-        subNav: [
-            {
-                Icon: RemixIcons.RiAddLine,
-                Display: "Nouveau utilisateur",
-                Link: "/users/new",
-            },
-            {
-                Icon: RemixIcons.RiListRadio,
-                Display: "Liste des utilisateurs",
-                Link: "/users/list",
-            }
-        ]
-        
+        Link: "/onlyprivateroute/users",
     },
     {
-        Icon: RemixIcons.RiSoundModuleLine,
+        Icon: RemixIcons.RiSettings2Line,
         Display: "Paramètres",
-        Link: "/settings",
+        Link: "/onlyprivateroute/settings",
     }
 ]
 

@@ -4,20 +4,22 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 0 10px;
-    width: 100%;
+    margin: 10px;
+    width: calc(100% - 20px);
     height: 4rem;
-    background: var(--header-color);
-    color: var(--logo-color);
-    box-shadow: 2px 2px 3px var(--shadow-color), -2px -2px 3px var(--shadow-color);
+    border-radius: var(--RADIUS-1);
+    color: var(--COLOR-LOGO);
+    background: var(--HEADER-PRIVATE-COLOR);
+    filter: drop-shadow(2px 2px 10px #868585);
     z-index: 200;
 
-    .Left {
+    .left {
         display: flex;
         align-items: center;
         gap: 10px;
         cursor: pointer;
 
-        .Company {
+        .brand {
             display: flex;
             align-items: center;
             gap: 10px;
@@ -29,68 +31,39 @@ header {
                 border-radius: 50%;
             }
         }
-
-        .Date {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
     }
 
-    .Middle {
-        position: relative;
-        display: flex;
-        align-items: center;
-        background: var(--color-1);
-        border-radius: 20px;
-        padding: 8px 15px;
-        width: calc(100% - 60%);
-        color: var(--z-color-2);
-
-        input {
-            width: 100%;
-            border: none;
-            outline: none;
-            background: none;
-        }
-
-        .Icon {
-            position: absolute;
-            right: 15px;
-        }
-    }
-
-    .Right {
+    .right {
         display: flex;
         align-items: center;
         gap: 10px;
 
-        .Not-SM {
+        .not-sm {
             display: flex;
             align-items: center;
             gap: 10px;
         }
 
-        .NotificationIcon {
+        .notification-icon {
             position: relative;
-            background: var(--color-notification);
-            box-shadow: 5px 5px 20px var(--shadow-color);
+            background: var(--COLOR-NOTIFICATION);
+            box-shadow: 5px 5px 20px var(--SHADOW-COLOR);
             width: 30px;
             height: 30px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--color-1);
+            color: var(--COLOR-1);
             cursor: pointer;
 
-            .newNotification {
+            .new-notification {
                 position: absolute;
                 top: -15px;
                 right: 0;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                background: var(--color-1);
+                background: var(--COLOR-1);
                 color: var(--logo-color);
                 border: 1px solid;
                 border-style: dashed;
@@ -104,17 +77,10 @@ header {
 }
 
 // Responsive==================================================
-@media screen and (max-width: 1240px) {
-    header {
-        .Middle {
-            width: calc(100% - 60%);
-        }
-    }
-}
 
 // @media screen and (max-width: 1000px) {
 //     header {
-//         .Right {
+//         .right {
 //             button {
 //                 padding: 10px;
 //                 small {
@@ -125,30 +91,20 @@ header {
 //     }
 // }
 
-@media screen and (max-width: 840px) {
-    header {
-        .Left {
-            .Date {
-                display: none;
-            }
-        }
-    }
-}
-
 @media screen and (max-width: 545px) {
     header {
-        .Left .Company span {
+        .left .brand span {
             display: none;
         }
-        //         .Right {
+        //         .right {
         //             // margin-bottom: 10px;
-        //             .Not-SM {
+        //             .not-sm {
         //                 position: absolute;
         //                 top: 150px;
         //                 flex-direction: column;
 
-        //                 .NotificationIcon {
-        //                     box-shadow: 2px 2px 3px var(--shadow-color), -2px -2px 3px var(--shadow-color);
+        //                 .notification-icon {
+        //                     box-shadow: 2px 2px 3px var(--SHADOW-COLOR), -2px -2px 3px var(--SHADOW-COLOR);
         //                 }
         //             }
         //         }

@@ -16,7 +16,7 @@ import { Account } from '../../services/accountService'
 import config from '../../config'
 
 const Sidebar = ({ profil, setProfil, sidebar, setSidebar }) => {
-    const access = Access()
+    const access = 11
     const Navigate = useNavigate()
     const idUser = localStorage.getItem('id')
 
@@ -87,19 +87,19 @@ const Sidebar = ({ profil, setProfil, sidebar, setSidebar }) => {
     }
 
     return (
-        <aside className={sidebar ? "SidebarMin" : "Sidebar"}>
-            <div className="User" onClick={() => setProfil(!profil)}>
-                <div className="Avatar">
+        <aside className={sidebar ? "sider-min" : "sidebar"}>
+            <div className="user" onClick={() => setProfil(!profil)}>
+                <div className="avatar">
                     <img src={imageToShow} alt="" />
                 </div>
-                <div className="InfoUser">
-                    <span>{substringName(user)}</span>
-                    <small>{user.User && user.User.Role.name}</small>
+                <div className="info-user">
+                    <span>Marley</span>
+                    <small>admin</small>
                 </div>
-                {profil ? <RemixIcons.RiArrowDropDownLine className='IconText' /> : <RemixIcons.RiArrowDropRightLine className='IconText' />}
+                {profil ? <RemixIcons.RiArrowDropDownLine className='icon-text' /> : <RemixIcons.RiArrowDropRightLine className='icon-text' />}
             </div>
 
-            <div className="Navigation" onClick={() => setSidebar(false)}>
+            <div className="navigation" onClick={() => setSidebar(false)}>
                 {
                     access === 11 ? ItemsInternal.map((item, index) => {
                         return <SubMenu item={item} key={index} />

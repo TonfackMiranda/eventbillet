@@ -9,19 +9,19 @@ const PrivateRouter = () => {
     const [profil, setProfil] = useState(false)
     const [sidebar, setSidebar] = useState(false)
     return (
-        <div className="Pages">
+        <div className="pages">
             <PrivateHeader
                 sidebar={sidebar}
                 setSidebar={setSidebar}
             />
-            <main className='Main'>
+            <main className='main'>
                 <Sidebar
                     profil={profil}
                     setProfil={setProfil}
                     sidebar={sidebar}
                     setSidebar={setSidebar}
                 />
-                <div className={sidebar ? "ContentMax" : "Content"}>
+                <div className={sidebar ? "content-max" : "content"}>
                     <Profil
                         profil={profil}
                         setProfil={setProfil}
@@ -29,7 +29,7 @@ const PrivateRouter = () => {
                     <Routes>
                         <Route element={<Layout />}>
                             <Route index element={<Dashboard />} />
-                            <Route path='/dashboard' element={<Dashboard />} />
+                            <Route path='/onlyprivateroute/dashboard' element={<Dashboard />} />
                         </Route>
                     </Routes>
                 </div>

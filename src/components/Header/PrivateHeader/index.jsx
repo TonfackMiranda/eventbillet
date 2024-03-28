@@ -65,63 +65,63 @@ const PrivateHeader = ({ sidebar, setSidebar }) => {
 
     return (
         <header>
-            <div className="Left" onClick={() => Navigate('/dashboard')}>
-                <div className="Company">
+            <div className="left" onClick={() => Navigate('/onlyprivateroute/dashboard')}>
+                <div className="brand">
                     {/* <img src={logo} alt="" /> */}
                     <span>EventWorld</span>
                 </div>
             </div>
-            <div className="Right">
-                <div className="Not-SM">
-                    {/* {access != 20 && ( */}
+            <div className="right">
+                <div className="not-sm">
+                    {access != 20 && (
                         location.pathname.includes('organizations') && !location.pathname.includes('new') ?
-                            <button className='Btn Success' onClick={newOrganization}>
+                            <button className='btn-custom-2 primary' onClick={newOrganization}>
                                 <RemixIcons.RiAddLine />
                                 <small>Nouvelle Organizat.</small>
                             </button> :
                             location.pathname.includes('companies') && !location.pathname.includes('new') ?
-                                <button className='Btn Success' onClick={newCompany}>
+                                <button className='btn-custom-2 primary' onClick={newCompany}>
                                     <RemixIcons.RiAddLine />
                                     <small>Nouvelle Entreprise</small>
                                 </button> :
                                 location.pathname.includes('surveys') && !location.pathname.includes('new') ?
-                                    <button className='Btn Success' onClick={newSurvey}>
+                                    <button className='btn-custom-2 primary' onClick={newSurvey}>
                                         <RemixIcons.RiAddLine />
                                         <small>Nouvelle Enquête</small>
                                     </button> :
                                     location.pathname.includes('users') && !location.pathname.includes('new') ?
-                                        <button className='Btn Success' onClick={newUser}>
+                                        <button className='btn-custom-2 primary' onClick={newUser}>
                                             <RemixIcons.RiAddLine />
                                             <small>Nouveau utilisateur</small>
                                         </button> :
                                         location.pathname.includes('managers') && location.pathname.includes('products') ?
-                                            <button className='Btn Success' onClick={newProduct}>
+                                            <button className='btn-custom-2 primary' onClick={newProduct}>
                                                 <RemixIcons.RiAddLine />
                                                 <small>Ajouter un produit</small>
                                             </button> :
                                             location.pathname.includes('managers') && location.pathname.includes('tables') ?
-                                                <button className='Btn Success' onClick={newTable}>
+                                                <button className='btn-custom-2 primary' onClick={newTable}>
                                                     <RemixIcons.RiAddLine />
                                                     <small>Ajouter une table</small>
                                                 </button> :
-                                                <button className='Btn Success' onClick={newSurvey}>
+                                                <button className='btn-custom-2 primary' onClick={newSurvey}>
                                                     <RemixIcons.RiAddLine />
                                                     <small>Nouvelle Enquête</small>
                                                 </button>
 
-                    {/* )} */}
+                    )}
 
-                    {/* <div className="NotificationIcon" onClick={toggleTheme}>
+                    {/* <div className="notification-icon" onClick={toggleTheme}>
                         {theme === 'light' ? <RemixIcons.RiMoonLine /> : <RemixIcons.RiSunLine />}
                     </div> */}
                     {access === 20 && (
-                        <div className="NotificationIcon" onClick={() => Navigate('/orders')}>
+                        <div className="notification-icon" onClick={() => Navigate('/orders')}>
                             <RemixIcons.RiNotification3Line />
-                            <span className='newNotification'>{allCount}</span>
+                            <span className='new-notification'>{allCount}</span>
                         </div>
                     )}
                 </div>
-                <div className="NotificationIcon" onClick={() => setSidebar(!sidebar)}>
+                <div className="notification-icon" onClick={() => setSidebar(!sidebar)}>
                     <RemixIcons.RiMenu4Line size={18} />
                 </div>
             </div>

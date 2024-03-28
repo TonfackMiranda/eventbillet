@@ -37,14 +37,16 @@
                 display: flex;
                 align-items: center;
                 margin: 1.7rem 0;
+
                 form {
                     display: flex;
                     flex-direction: column;
-                    gap: 10px;
-                    width: 100%;
-                    background: #e2e2e2;
-                    padding: 1rem;
+                    gap: 1rem;
+                    background: #ffffffa6;
+                    padding: 2rem;
+                    min-width: 400px;
                     border-radius: var(--RADIUS-1);
+                    filter: drop-shadow(-10px 5px 30px #dbdbdb);
 
                     h3 {
                         color: var(--COLOR-1);
@@ -56,7 +58,7 @@
                         font-size: var(--SIZE-3);
                         background: #fff;
                         border: none;
-                        border-radius: var(--RADIUS-1);
+                        border-radius: var(--RADIUS-2);
                         resize: none;
                     }
 

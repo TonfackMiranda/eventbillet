@@ -1,5 +1,5 @@
-.Sidebar,
-.SidebarMin {
+.sidebar,
+.sidebar-min {
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -10,20 +10,22 @@
     transition: 1s all;
     z-index: 100;
 
-    .User {
+    .user {
         display: flex;
         align-items: center;
         gap: 10px;
         height: 80px;
         width: 229px;
-        background: var(--user-color);
+        background: var(--USER-BG);
+        color: var(--USER-COLOR);
         padding: 0 10px;
         cursor: pointer;
         transition: 1s all;
         overflow: hidden;
-        box-shadow: 5px 5px 10px var(--shadow-color);
+        filter: drop-shadow(2px 2px 10px #868585);
+        border-radius: var(--RADIUS-1);
 
-        .Avatar {
+        .avatar {
             display: flex;
             width: 60px;
             height: 60px;
@@ -38,7 +40,7 @@
             }
         }
 
-        .InfoUser {
+        .info-user {
             display: flex;
             flex-direction: column;
             color: var(--color-1);
@@ -47,31 +49,31 @@
             text-transform: capitalize;
         }
 
-        .IconText {
+        .icon-text {
             font-size: 20px;
             color: var(--color-1);
         }
     }
 
-    .IconText {
+    .icon-text {
         font-size: 14px;
         color: var(--aside-text-color);
         transition: .3s;
     }
 
-    .Navigation {
+    .navigation {
         display: flex;
         flex-direction: column;
         gap: 2px;
-        height: calc(100vh - 10.5rem);
-        // border-radius: 5px;
-        background: var(--aside-color);
-        box-shadow: 5px 5px 10px var(--shadow-color);
-        overflow-x: hidden;
-        overflow-y: scroll;
+        width: 229px;
+        height: calc(100vh - 11.5rem);
+        border-radius: var(--RADIUS-1);
+        background: var(--ASIDE-COLOR);
+        filter: drop-shadow(2px 2px 10px #868585);
+        overflow: hidden;
 
         a {
-            color: var(--aside-text-color);
+            color: var(--ASIDE-TEXT-COLOR);
             font-weight: 600;
             text-decoration: none;
             padding-left: 30px;
@@ -80,40 +82,41 @@
             align-items: center;
             // width: 200px;
             min-height: 50px;
+            font-size: var(--SIZE-3);
             transition: .3s;
             overflow: hidden;
 
-            &.LinkActive {
-                background: var(--active-color);
-                color: var(--color-1);
+            &.link-active {
+                background: var(--ACTIVE-COLOR);
+                color: var(--COLOR-2);
                 font-weight: 500;
                 position: relative;
 
-                .IconText {
-                    color: var(--color-1);
+                .icon-text {
+                    color: var(--COLOR-2);
                 }
 
                 &::before {
                     width: 3px;
                     height: 20px;
-                    background: var(--color-1);
+                    background: var(--COLOR-2);
                     position: absolute;
                     content: '';
                     left: 0;
                 }
             }
 
-            &.LinkActive2 {
+            &.link-active2 {
                 // background: var(--color-2) !important;
-                color: var(--aside-text-color);
-                border: 1px solid var(--aside-text-color);
+                color: var(--ASIDE-TEXT-COLOR);
+                border: 1px solid var(--ASIDE-TEXT-COLOR);
                 border-style: dashed;
                 font-weight: 500;
                 transition: .3s;
             }
 
-            &:not(a.LinkActive):hover {
-                background: var(--shadow-color);
+            &:not(a.link-active):hover {
+                background: var(--SHADOW-COLOR);
             }
 
             i {
@@ -123,18 +126,18 @@
             }
         }
 
-        .sousMenu {
+        .sous-menu {
             padding: 10px 5px;
             margin: 0 40px;
-            color: var(--aside-text-color);
+            color: var(--ASIDE-TEXT-COLOR);
             font-weight: 400;
             width: 100%;
             min-height: 40px;
             transition: .3s;
 
             &:hover {
-                background: var(--shadow-color) !important;
-                color: var(--aside-text-color);
+                background: var(--SHADOW-COLOR) !important;
+                color: var(--ASIDE-TEXT-COLOR);
                 font-weight: 500;
             }
 
@@ -150,40 +153,40 @@
     }
 }
 
-.SidebarMin {
+.sidebar-min {
     width: 50px;
 
-    .User {
+    .user {
         padding: 0px;
         padding-left: 5px;
         width: 50px;
 
-        .IconText {
+        .icon-text {
             display: none;
         }
 
-        .Avatar {
+        .avatar {
             width: 40px;
             height: 40px;
         }
 
-        .InfoUser {
+        .info-user {
             display: none;
         }
 
-        .IconText {
+        .icon-text {
             font-size: 15px;
         }
     }
 
-    .Navigation {
+    .navigation {
 
         a {
             padding: 15px;
             padding-left: 15px;
         }
 
-        .sousMenu {
+        .sous-menu {
             padding: 10px 5px;
             margin: 0 10px;
 
@@ -196,32 +199,32 @@
 
 @media screen and (max-width: 1000px) {
 
-    .SidebarMin {
+    .sidebar-min {
         width: 229px;
         // display: none;
 
-        .User {
+        .user {
             width: 229px;
             padding: 0 10px;
 
-            .Avatar {
+            .avatar {
                 width: 60px;
                 height: 60px;
             }
 
-            .InfoUser {
+            .info-user {
                 display: flex;
             }
         }
 
 
-        .Navigation {
+        .navigation {
             a {
                 padding: 15px;
                 padding-left: 15px;
             }
 
-            .sousMenu {
+            .sous-menu {
                 padding: 10px 5px;
                 margin: 0 10px;
 
@@ -232,40 +235,40 @@
         }
     }
 
-    .Sidebar {
+    .sidebar {
         width: 50px;
 
-        .User {
+        .user {
             padding: 0px;
             padding-left: 5px;
             width: 50px;
 
-            .IconText {
+            .icon-text {
                 display: none;
             }
 
-            .Avatar {
+            .avatar {
                 width: 40px;
                 height: 40px;
             }
 
-            .InfoUser {
+            .info-user {
                 display: none;
             }
 
-            .IconText {
+            .icon-text {
                 font-size: 15px;
             }
         }
 
-        .Navigation {
+        .navigation {
 
             a {
                 padding: 15px;
                 padding-left: 15px;
             }
 
-            .sousMenu {
+            .sous-menu {
                 padding: 10px 5px;
                 margin: 0 10px;
 
@@ -278,7 +281,7 @@
 }
 
 @media screen and (max-width: 545px) {
-    .SidebarMin {
+    .sidebar-min {
         width: calc(100% - 1rem);
         background: linear-gradient(45deg, #ffffff, rgb(236, 234, 234));
 
@@ -286,28 +289,28 @@
             box-shadow: 2px 2px 2px #d8d8d8;
         }
 
-        .sousMenu {
+        .sous-menu {
             box-shadow: 2px 2px 2px #e7e5e5;
             border: 1px solid #e7e5e5;
             border-style: dashed;
             margin-left: 40px !important;
         }
 
-        .User {
+        .user {
             width: 100%;
         }
 
-        .Navigation {
+        .navigation {
             background: none;
         }
     }
 
-    .Sidebar {
+    .sidebar {
         width: 0px;
         overflow: hidden;
         // display: none;
 
-        .User {
+        .user {
             width: 0px;
         }
     }
