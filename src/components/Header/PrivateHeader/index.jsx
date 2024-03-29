@@ -64,7 +64,7 @@ const PrivateHeader = ({ sidebar, setSidebar }) => {
     // }, [access, idUser, eventOrder, company])
 
     return (
-        <header>
+        <header className='private-header'>
             <div className="left" onClick={() => Navigate('/onlyprivateroute/dashboard')}>
                 <div className="brand">
                     {/* <img src={logo} alt="" /> */}

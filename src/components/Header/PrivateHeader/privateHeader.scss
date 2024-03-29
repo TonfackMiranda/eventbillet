@@ -1,4 +1,4 @@
-header {
+.private-header{
     position: fixed;
     display: flex;
     align-items: center;
@@ -79,7 +79,7 @@ header {
 // Responsive==================================================
 
 // @media screen and (max-width: 1000px) {
-//     header {
+//     .private-header{
 //         .right {
 //             button {
 //                 padding: 10px;
@@ -92,7 +92,7 @@ header {
 // }
 
 @media screen and (max-width: 545px) {
-    header {
+    .private-header{
         .left .brand span {
             display: none;
         }
