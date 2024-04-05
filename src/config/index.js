@@ -9,7 +9,7 @@ if (ENV === 'dev') {
 }
 else {
    config = {
-      serverUrl: "",
+      serverUrl: "https://flamboyant-yalow.212-227-211-20.plesk.page",
       frontUrl: ""
    }
 }

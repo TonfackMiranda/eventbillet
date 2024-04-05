@@ -35,7 +35,7 @@ const isLogged = () => {
         const tokenValidity = isValidToken(token)
         if (tokenValidity.isValid) {
             return { isValid: true }
-        } 
+        }
         else {
             return { isValid: false, errorCode: tokenValidity.errorCode }
         }
@@ -44,7 +44,36 @@ const isLogged = () => {
 }
 
 const getToken = () => {
-    const token = localStorage.getItem('lkiy-')
+    const token = localStorage.getItem("|123hnul")
+    return token
+}
+
+const saveTokenCustomer = (token, id) => {
+    localStorage.setItem('123hnul', token)
+    localStorage.setItem('ijhjgdfd', id)
+}
+
+const logoutCustomer = () => {
+    localStorage.removeItem('123hnul')
+    localStorage.removeItem('ijhjgdfd')
+}
+
+const isLoggedCustomer = () => {
+    const token = localStorage.getItem('123hnul')
+    if (token) {
+        const tokenValidity = isValidToken(token)
+        if (tokenValidity.isValid) {
+            return { isValid: true }
+        }
+        else {
+            return { isValid: false, errorCode: tokenValidity.errorCode }
+        }
+    }
+    return { isValid: false, errorCode: "TOKEN_NOT_FOUND" }
+}
+
+const getTokenCustomer = () => {
+    const token = localStorage.getItem('123hnul')
     return token
 }
 
@@ -52,5 +81,9 @@ export const Account = {
     saveToken,
     logout,
     isLogged,
-    getToken
+    getToken,
+    saveTokenCustomer,
+    logoutCustomer,
+    isLoggedCustomer,
+    getTokenCustomer
 }
