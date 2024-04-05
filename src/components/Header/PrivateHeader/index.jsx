@@ -106,7 +106,7 @@ const PrivateHeader = ({ sidebar, setSidebar }) => {
                                                 </button> :
                                                 <button className='btn-custom-2 primary' onClick={newSurvey}>
                                                     <RemixIcons.RiAddLine />
-                                                    <small>Nouvelle Enquête</small>
+                                                    <small>Nouveau évenement</small>
                                                 </button>
 
                     )}

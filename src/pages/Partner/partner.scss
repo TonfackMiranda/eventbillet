@@ -10,6 +10,7 @@
                 justify-content: center;
                 display: flex;
                 gap: 1rem;
+                overflow-x: scroll;
 
                 img {
                     width: 10rem;
@@ -66,6 +67,17 @@
                         height: 40px;
                     }
                 }
+            }
+        }
+    }
+}
+
+// RESPONSIVE
+@media screen and (max-width: 625px) {
+    .partner {
+        .content {
+            .type-partner {
+                padding-top: 2rem;
             }
         }
     }
