@@ -1,12 +1,19 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import PublicHeader from '../../../components/Header/PublicHeader'
 import ImageTypeEvent from '../../../assets/images/3.jpg'
 import './typeEvent.scss'
 import Footer from '../../../components/Footer'
+import {getEventsByCategory} from "../../../data/events";
 
 const TypeEvent = () => {
   const { type } = useParams()
+  const [events, setEvents] = useState([])
+
+  useEffect(() => {
+    setEvents(getEventsByCategory(type))
+  }, []);
+
   const Navigate = useNavigate()
   return (
     <div className="type-event">
@@ -50,10 +57,16 @@ const TypeEvent = () => {
         <div className="some-event">
           <h1 className='title'>Quelques évènements</h1>
           <div className="some-event-details">
-            <div className="list" onClick={() => Navigate('/event/conference/details/1')}>AAA YYY ZZZ</div>
-            <div className="list" onClick={() => Navigate('/event/conference/details/1')}>AAA YYY ZZZ</div>
-            <div className="list" onClick={() => Navigate('/event/conference/details/1')}>AAA YYY ZZZ</div>
-            <div className="list" onClick={() => Navigate('/event/conference/details/1')}>AAA YYY ZZZ</div>
+            { events.length > 0 ? events.map((e) => (
+                <div className="list" onClick={() => Navigate(`/event/conference/details/${e.id}`)}>
+                  <h3>{e.name}</h3>
+                  <p>{e.shortDescription} </p>
+                  <span > Organizer: {e.organizer} </span>
+                  <span className="ticket-date" >Date: {e.date}  <br/> {e.location} </span>
+                </div>
+            )):
+                <h3>Aucun evenement Lister</h3>
+            }
           </div>
         </div>
       </div>/
